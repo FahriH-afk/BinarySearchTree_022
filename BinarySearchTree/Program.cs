@@ -33,7 +33,7 @@ namespace BinarySearchTree
         {
             ROOT = null; // Initializing root to null
         }
-        public void insert(string element) //Insert a node in the binary
+        public void insert(string element) //Insert a node in the binary search trr
         {
             node tmp, parent = null, currentnode = null;
             Find(element, ref parent, ref currentnode);
@@ -60,6 +60,7 @@ namespace BinarySearchTree
                 }
             }
         }
+        public
 
 
         static void Main(string[] args)
