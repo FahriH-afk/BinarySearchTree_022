@@ -36,7 +36,7 @@ namespace BinarySearchTree
         public void insert(string element) //Insert a node in the binary search trr
         {
             node tmp, parent = null, currentnode = null;
-            Find(element, ref parent, ref currentnode);
+            find(element, ref parent, ref currentnode);
             if (currentnode != null)
             {
                 Console.WriteLine("Duplicate words not allowed");
@@ -101,6 +101,21 @@ namespace BinarySearchTree
                 Console.WriteLine(ptr.info + "");
                 preorder(ptr.lchild);
                 preorder(ptr.rchild);
+            }
+        }
+
+        public void postorder(node ptr)
+        {
+            if (ROOT == null)
+            {
+                Console.WriteLine("Tree is empty");
+                return;
+            }
+            if (ptr != null)
+            {
+                postorder(ptr.lchild);
+                postorder(ptr.rchild);
+                Console.Write(ptr.info + "");
             }
         }
 
