@@ -96,7 +96,14 @@ namespace BinarySearchTree
                 Console.WriteLine("Tress is empty");
                 return;
             }
+            if (ptr != null)
+            {
+                Console.WriteLine(ptr.info + "");
+                preorder(ptr.lchild);
+                preorder(ptr.rchild);
+            }
         }
+
 
 
         static void Main(string[] args)
